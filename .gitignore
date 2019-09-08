@@ -1,0 +1,11 @@
+# IDEs
+.idea
+*.iml
+*~
+
+# System files
+.DS_Store
+
+# GIT / Composer
+/composer.phar
+/auth.json

@@ -1,0 +1,277 @@
+<html>
+  <head>
+    <title>Syntax Highlight</title>
+
+    <link href="./prism-light.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <textarea
+      id="code-input"
+      rows="20"
+      style="width: 90%;"
+      placeholder="Input your code"
+      autofocus>
+    </textarea>
+    <select id="select-language" name="language">
+        <option value="" selected disabled="disabled">Please choose a language</option>
+        <option value="css">CSS</option>
+        <option value="html">HTML</option>
+        <option value="java">Java</option>
+        <option value="javascript">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="scss">Sass (Scss)</option>
+        <option value="" disabled="disabled">------</option>
+        <option value="properties">.properties</option>
+        <option value="6502 assembly">6502 Assembly</option>
+        <option value="abap">ABAP</option>
+        <option value="actionscript">ActionScript</option>
+        <option value="ada">Ada</option>
+        <option value="apache-configuration">Apache Configuration</option>
+        <option value="apl">APL</option>
+        <option value="applescript">AppleScript</option>
+        <option value="aql">AQL</option>
+        <option value="arduino">Arduino</option>
+        <option value="arff">ARFF</option>
+        <option value="asciidoc">AsciiDoc</option>
+        <option value="asp.net">ASP.NET (C#)</option>
+        <option value="autohotkey">AutoHotkey</option>
+        <option value="autoit">AutoIt</option>
+        <option value="bash">Bash</option>
+        <option value="basic">BASIC</option>
+        <option value="batch">Batch</option>
+        <option value="bison">Bison</option>
+        <option value="brainfuck">Brainfuck</option>
+        <option value="bro">Bro</option>
+        <option value="c">C</option>
+        <option value="c#">C#</option>
+        <option value="c++">C++</option>
+        <option value="cil">CIL</option>
+        <option value="c-like">C-like</option>
+        <option value="clojure">Clojure</option>
+        <option value="cmake">CMake</option>
+        <option value="coffeescript">CoffeeScript</option>
+        <option value="context">ConTeXt</option>
+        <option value="crystal">Crystal</option>
+        <option value="d">D</option>
+        <option value="dart">Dart</option>
+        <option value="diff">Diff</option>
+        <option value="django">Django/Jinja2</option>
+        <option value="dns-zone-file">DNS zone file</option>
+        <option value="docker">Docker</option>
+        <option value="eiffel">Eiffel</option>
+        <option value="ejs">EJS</option>
+        <option value="elixir">Elixir</option>
+        <option value="elm">Elm</option>
+        <option value="erb">ERB</option>
+        <option value="erlang">Erlang</option>
+        <option value="f#">F#</option>
+        <option value="flow">Flow</option>
+        <option value="fortran">Fortran</option>
+        <option value="gamemaker-language">GameMaker Language</option>
+        <option value="g-code">G-code</option>
+        <option value="gdscript">GDScript</option>
+        <option value="gedcom">GEDCOM</option>
+        <option value="gherkin">Gherkin</option>
+        <option value="git">Git</option>
+        <option value="glsl">GLSL</option>
+        <option value="go">Go</option>
+        <option value="graphql">GraphQL</option>
+        <option value="groovy">Groovy</option>
+        <option value="haml">Haml</option>
+        <option value="handlebars">Handlebars</option>
+        <option value="haskell">Haskell</option>
+        <option value="haxe">Haxe</option>
+        <option value="hcl">HCL</option>
+        <option value="http">HTTP</option>
+        <option value="ichigojam">IchigoJam</option>
+        <option value="icon">Icon</option>
+        <option value="inform 7">Inform 7</option>
+        <option value="ini">Ini</option>
+        <option value="io">Io</option>
+        <option value="j">J</option>
+        <option value="javadoc">JavaDoc</option>
+        <option value="javadoc-like">JavaDoc-like</option>
+        <option value="jolie">Jolie</option>
+        <option value="jq">JQ</option>
+        <option value="jsdoc">JSDoc</option>
+        <option value="json">JSON</option>
+        <option value="json5">JSON5</option>
+        <option value="jsonp">JSONP</option>
+        <option value="julia">Julia</option>
+        <option value="keyman">Keyman</option>
+        <option value="kotlin">Kotlin</option>
+        <option value="latex">LaTeX</option>
+        <option value="less">Less</option>
+        <option value="lilypond">LilyPond</option>
+        <option value="liquid">Liquid</option>
+        <option value="lisp">Lisp</option>
+        <option value="livescript">LiveScript</option>
+        <option value="lolcode">LOLCODE</option>
+        <option value="lua">Lua</option>
+        <option value="makefile">Makefile</option>
+        <option value="markdown">Markdown</option>
+        <option value="markup">Markup</option>
+        <option value="mathml">MathML</option>
+        <option value="matlab">MATLAB</option>
+        <option value="mel">MEL</option>
+        <option value="mizar">Mizar</option>
+        <option value="monkey">Monkey</option>
+        <option value="n1ql">N1QL</option>
+        <option value="n4js">N4JS</option>
+        <option value="nasm">NASM</option>
+        <option value="nginx">nginx</option>
+        <option value="nim">Nim</option>
+        <option value="nix">Nix</option>
+        <option value="nsis">NSIS</option>
+        <option value="objective-c">Objective-C</option>
+        <option value="ocaml">OCaml</option>
+        <option value="opencl">OpenCL</option>
+        <option value="oz">Oz</option>
+        <option value="pari/gp">PARI/GP</option>
+        <option value="parser">Parser</option>
+        <option value="pascal">Pascal</option>
+        <option value="pascaligo">Pascaligo</option>
+        <option value="pc-axis">PC-Axis</option>
+        <option value="perl">Perl</option>
+        <option value="php extras">PHP Extras</option>
+        <option value="phpdoc">PHPDoc</option>
+        <option value="pl/sql">PL/SQL</option>
+        <option value="powershell">PowerShell</option>
+        <option value="processing">Processing</option>
+        <option value="prolog">Prolog</option>
+        <option value="protocol-buffers">Protocol Buffers</option>
+        <option value="pug">Pug</option>
+        <option value="puppet">Puppet</option>
+        <option value="pure">Pure</option>
+        <option value="python">Python</option>
+        <option value="q">Q (kdb+ database)</option>
+        <option value="qore">Qore</option>
+        <option value="r">R</option>
+        <option value="react jsx">React JSX</option>
+        <option value="react tsx">React TSX</option>
+        <option value="reason">Reason</option>
+        <option value="regex">Regex</option>
+        <option value="ren'py">Ren'py</option>
+        <option value="rip">Rip</option>
+        <option value="roboconf">Roboconf</option>
+        <option value="ruby">Ruby</option>
+        <option value="rust">Rust</option>
+        <option value="sas">SAS</option>
+        <option value="sass">Sass (Sass)</option>
+        <option value="scala">Scala</option>
+        <option value="scheme">Scheme</option>
+        <option value="shell">Shell</option>
+        <option value="shell-session">Shell session</option>
+        <option value="smalltalk">Smalltalk</option>
+        <option value="smarty">Smarty</option>
+        <option value="sparql">SPARQL</option>
+        <option value="sql">SQL</option>
+        <option value="stylus">Stylus</option>
+        <option value="svg">SVG</option>
+        <option value="swift">Swift</option>
+        <option value="tap">TAP</option>
+        <option value="tcl">Tcl</option>
+        <option value="tex">TeX</option>
+        <option value="textile">Textile</option>
+        <option value="toml">TOML</option>
+        <option value="twig">Twig</option>
+        <option value="typescript">TypeScript</option>
+        <option value="vala">Vala</option>
+        <option value="vb.net">VB.Net</option>
+        <option value="velocity">Velocity</option>
+        <option value="verilog">Verilog</option>
+        <option value="vhdl">VHDL</option>
+        <option value="vim">vim</option>
+        <option value="visual-basic">Visual Basic</option>
+        <option value="webassembly">WebAssembly</option>
+        <option value="xml">XML</option>
+        <option value="xquery">XQuery</option>
+        <option value="yaml">YAML</option>
+        <option value="zig">Zig</option>
+    </select>
+    <select id="select-theme" name="theme">
+      <option value="" selected disabled="disabled">Please choose a theme</option>
+      <option value="light">Light Theme</option>
+      <option value="dark">Dark Theme</option>
+    </select>
+    <div class="checkboxes">
+        <div class="box">
+            <input id="line-numbers" type="checkbox" name="line-numbers" value="line-numbers">
+            <label for="line-numbers">Show line-numbers</label>
+        </div>
+        <div class="box">
+            <input id="match-braces" type="checkbox" name="match-braces" value="match-braces">
+            <label for="match-braces">Activate rainbow braces</label>
+        </div>
+    </div>
+
+    <button id="highlight" type="button" onclick="highlightCode()">
+      Highlight Code
+    </button>
+
+    <br><br><br>
+
+    <pre><code class="language-css line-numbers match-braces no-brace-hover rainbow-braces">
+            p { 
+            color: red 
+            }</code></pre>
+            
+
+    <div id="output"></div>
+
+    <script src="./prism.js" type="text/javascript" data-manual></script>
+
+    <script type="text/javascript">
+      function highlightCode() {
+        const inputCode = document.getElementById("code-input").value;
+        const selectedLanguage = document.getElementById("select-language").value;
+        const checkedLineNumbers = document.getElementById("line-numbers").checked;
+        const checkedMatchBraces = document.getElementById("match-braces").checked;
+
+        if (selectedLanguage === '') {
+            alert("Please choose a language!");
+            return;
+        }
+
+        let selectedTheme = document.getElementById("select-theme").value;
+        if (selectedTheme === '') {
+          selectedTheme = "light";
+        }
+
+        let classes = 'language-' + selectedLanguage + ' ';
+        if (checkedLineNumbers) {
+            classes += "line-numbers ";
+        }
+
+        if (checkedMatchBraces) {
+            classes += "match-braces no-brace-hover rainbow-braces ";
+        }
+
+        let dataSrc = './prism-light.css';
+        if (selectedTheme === 'dark') {
+            dataSrc = './prism-dark.css';
+        }
+
+        let output = '<pre data-src="' + dataSrc + '" data-type="text/css"><code class="' + classes + '">' + inputCode + '</code></pre>';
+
+        console.log(inputCode);
+        console.log(selectedLanguage);
+        console.log(checkedLineNumbers);
+        console.log(checkedMatchBraces);
+        console.log(selectedTheme);
+        console.log(output);
+
+        let outputElement = document.getElementById('output');
+        outputElement.innerHTML = output;
+
+        let outputGenerated = outputElement.querySelector('code');
+        Prism.highlightElement(outputGenerated);
+
+        outputElement.parentElement.replaceChild(outputGenerated, outputElement);
+
+        outputElement = outputGenerated;
+      }
+    </script>
+
+  </body>
+</html>
